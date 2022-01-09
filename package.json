@@ -1,0 +1,16 @@
+{
+  "name": "bitdevprojectshowcase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "showcase": "node index.js",
+    "dev": "NPMBUILD=FALSE node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "link-preview-js": "^2.1.8"
+  }
+}
