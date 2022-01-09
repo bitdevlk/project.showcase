@@ -13,29 +13,27 @@
     <title>Bitdevs</title>
 </head>
 
-<body width="100vw">
-    <div
-        style=" max-width: 100rem; margin-left: auto; margin-right: auto ; padding-left: 2rem ; padding-right: 2rem; padding-top: 4rem; padding-bottom: 4rem; ">
+<body>
+    <div class="container-md max-auto">
+        <div class="px-4">
 
-        <div class="text-center"
-            style="margin-left: auto; margin-right: auto; padding-left: 2rem ; padding-right: 2rem; padding-top: 1rem; padding-bottom: 1rem;">
+            <div class="text-center mx-auto">
 
-            <div class="lead">
-                <h1 class="display-6">
-                    Soft Vessel
+                <div class="lead">
+                    <h1 class="display-6 pt-5 mt-5">
+                        Soft Vessel
+                    </h1>
+                    <h4 class="pt-1">
+                        React based industrial training
+                    </h4>
+                </div>
+
+                <h1 class="display-1 pt-4 pb-4">
+                    Team Bitdevs
                 </h1>
-                <h4>
-                    React based industrial training
-                </h4>
             </div>
 
-            <h1 class="display-1" style="padding-top: 4rem;">
-                Team Bitdevs
-            </h1>
-        </div>
-
-        <div style="min-width: 34rem; max-width: 68rem; margin-left: auto; margin-right: auto;">
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="row row-cols-1 row-cols-lg-2 g-4">
 
                 <% members.forEach(function(member){ %>
 
@@ -47,27 +45,23 @@
                     <% }); %>
 
             </div>
+
+            <div class="text-center mx-auto px-2 pt-4 mt-4 pb-1">
+
+                <h1 class="display-3">
+                    Projects
+                </h1>
+
+            </div>
+
+            <div class="mx-auto px-2">
+
+                <%- include('showcase', {projects: repos}); %>
+
+            </div>
         </div>
-
-        <div class="text-center"
-            style="margin-left: auto; margin-right: auto; padding-left: 2rem ; padding-right: 2rem; padding-top: 6rem; padding-bottom: 1rem;">
-
-            <h1 class="display-1">
-                Projects
-            </h1>
-
-        </div>
-
-        <div
-            style="min-width: 40rem; max-width: 80rem; margin-left: auto; margin-right: auto; padding-left: 2rem ; padding-right: 2rem;">
-
-            <%- include('showcase', {projects: repos}); %>
-
-        </div>
-
-
-
     </div>
+
 </body>
 
 </html>

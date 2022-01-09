@@ -1,39 +1,39 @@
-<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="row row-cols-1 row-cols-lg-2 g-4">
 
     <% projects.forEach(function(proj){ %>
-        <div class="col" style="width: 34rem; margin-left: auto; margin-right: auto; ">
+        <div class="col mx-auto">
 
             <a href="/<%=proj.url%>" style="text-decoration: none; color: black;">
 
-                <div class="card shadow" style="width: 32rem; padding: 1rem; margin: 1rem;">
+                <div class="card shadow">
 
                     <h5 class="card-header text-center">
                         <%= proj.name %>
                     </h5>
 
-                    <% if (proj.img) { %>
-                        <img src="<%=proj.img%>"
-                            style="max-height: 10rem; height: auto; width: auto; margin-left: auto; margin-right: auto; "
-                            class="card-img-top" alt="<%= proj.name %>">
-                        <% } %>
-
-                            <div
-                                class="card-body padding-left: 2rem ; padding-right: 2rem; padding-top: 4rem; padding-bottom: 4rem;">
-                                <h5 class="card-title">
-                                    <%= proj.name %>
-                                </h5>
-
-                                <% if (proj.member) { %>
-                                    <h6 class="card-title">
-                                        <%= proj.member.name %>
-                                    </h6>
-                                    <% } %>
+                    <div style="display: flex; justify-content: center;">
+                        <% if (proj.img) { %>
+                            <img src="<%=proj.img%>" class="card-img-top mx-auto my-auto" alt="<%= proj.name %>">
+                            <% } %>
+                    </div>
 
 
-                                        <p class="card-text">
-                                            <%= proj.title %>.
-                                        </p>
-                            </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= proj.name %>
+                        </h5>
+
+                        <% if (proj.member) { %>
+                            <h6 class="card-title">
+                                <%= proj.member.name %>
+                            </h6>
+                            <% } %>
+
+
+                                <p class="card-text">
+                                    <%= proj.title %>.
+                                </p>
+                    </div>
                 </div>
 
             </a>

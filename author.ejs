@@ -15,11 +15,9 @@
 
 
 <body width="100vw">
-    <div
-        style=" max-width: 100rem; margin-left: auto; margin-right: auto ; padding-left: 2rem ; padding-right: 2rem; padding-top: 4rem; padding-bottom: 4rem; ">
+    <div class="container-md max-auto">
 
-        <div class="text-center"
-            style="margin-left: auto; margin-right: auto; padding-left: 2rem ; padding-right: 2rem; padding-top: 1rem; padding-bottom: 1rem;">
+        <div class="text-center mx-auto px-4 pt-4 mt-4 pb-1">
 
             <div class="lead">
                 <h1 class="display-6">
@@ -30,27 +28,25 @@
                 </h4>
             </div>
 
-            <% if ( author.member) { %>
-                <h1 class="display-1">
-                    <%= author.member.name %>
-                </h1>
-                <% } %>
+
         </div>
-        <div>
-            <% if ( author.member) { %>
+        <div class="col-12 col-md-10 col-xl-6 mx-auto">
+            <div class="px-4">
 
-                <a href="<%=author.member.url%>" style="text-decoration: none; color: black;">
-                    <%- include('member', {member: author.member}); %>
-                </a>
-                <% } %>
+                <% if ( author.member) { %>
 
+                    <a href="<%=author.member.url%>" style="text-decoration: none; color: black;">
+                        <%- include('member', {member: author.member}); %>
+                    </a>
+                    <% } %>
+
+            </div>
         </div>
 
         <% if (author.projects && author.projects.length && author.projects.length !=0) { %>
 
 
-            <div class="text-center"
-                style="margin-left: auto; margin-right: auto; padding-left: 2rem ; padding-right: 2rem; padding-top: 6rem; padding-bottom: 1rem;">
+            <div class="text-center mx-auto px-2 pt-4 mt-4 pb-1">
 
                 <h1 class="display-3">
                     Projects
@@ -58,8 +54,7 @@
 
             </div>
 
-            <div
-                style="min-width: 40rem; max-width: 80rem; margin-left: auto; margin-right: auto; padding-left: 2rem ; padding-right: 2rem;">
+            <div class="mx-auto px-2">
 
                 <%- include('showcase', {projects: author.projects}); %>
 

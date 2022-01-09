@@ -1,19 +1,17 @@
-<div class="col" style="width: 34rem; margin-left: auto; margin-right: auto; ">
-    <div class="card shadow" style="width: 32rem; padding: 1rem; margin: 1rem;">
-        <div class="row g-0" style="width: 30rem;">
-            <div class="col-md-4" style="width: 10rem;">
+<div class="col mx-auto">
+    <div class="card shadow p-1 m-1">
+        <div class="row g-0">
+            <div class="col-4 px-1" style="display: flex; justify-content: center;">
                 <% if (member.image) { %>
-                    <img src="<%=member.image%>"
-                        style="max-width: 10rem; height: auto; width: auto; margin-left: auto; margin-right: auto; "
-                        class="card-img-top" alt="<%= member.name %>">
+                    <img src="<%=member.image%>" class="card-img-top mx-auto my-auto" alt="<%= member.name %>">
                     <% } %>
             </div>
-            <div class="col-md-8" style="width: 20rem;">
-                <div class="card-body">
-                    <h5 class="card-title">
+            <div class="col-8">
+                <div class="card-body p-4">
+                    <h5 class="card-title display-6">
                         <%= member.name %>
                     </h5>
-                    <p class="card-text">
+                    <p class="card-text ">
                         <%= member.description %>.
                     </p>
                 </div>
