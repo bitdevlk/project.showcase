@@ -10,6 +10,10 @@ exports.members = [
     {
         name: "Chathurika Dhananjani",
         github: "chathurikadhananjani"
+    },
+    {
+        name: "Harindu Wijesinghe",
+        github: "hariwij"
     }
 ]
 
@@ -23,6 +27,11 @@ exports.projects = [
         author: 'HarshaAbeyvickrama',
         name: 'Tic Tac Toe',
         repo: 'HarshaAbeyvickrama/React_tic-tac-toe'
+    },
+    {
+        author: 'hariwij',
+        name: 'Tut tak toi',
+        repo: 'hariwij/tictactoe-game'
     },
 ]
 
