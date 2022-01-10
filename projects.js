@@ -10,6 +10,10 @@ exports.members = [
     {
         name: "Chathurika Dhananjani",
         github: "chathurikadhananjani"
+    },
+    {
+        name: "Lihini Jayasinghe",
+        github: "Lihini98"
     }
 ]
 
