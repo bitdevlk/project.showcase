@@ -1,5 +1,9 @@
 exports.members = [
     {
+        name: "Bitdevs team",
+        github: "bitdevlk"
+    },
+    {
         name: 'Hasindu Lanka',
         github: 'HasinduLanka'
     },
@@ -27,6 +31,11 @@ exports.projects = [
         author: 'HarshaAbeyvickrama',
         name: 'Tic Tac Toe',
         repo: 'HarshaAbeyvickrama/React_tic-tac-toe'
+    },
+    {
+        author: 'bitdevlk',
+        name: 'Library',
+        repo: 'bitdevlk/library-spa'
     },
 ]
 
