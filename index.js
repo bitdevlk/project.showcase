@@ -180,6 +180,18 @@ async function Main() {
 
     let authors_unique = [...new Set(authors)]
 
+    authors_unique.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+    })
+
+    members.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+    })
+
 
     ejs.renderFile("index.ejs", { "repos": repos, "members": members }, (err, str) => {
         fs.writeFileSync(`./build/index.html`, str)
