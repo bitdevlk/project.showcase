@@ -13,7 +13,9 @@
 
                     <div style="display: flex; justify-content: center;">
                         <% if (proj.img) { %>
-                            <img src="<%=proj.img%>" class="card-img-top mx-auto my-auto" alt="<%= proj.name %>">
+                            <img src="<%=proj.img%>" class="card-img-top mx-auto my-auto"
+                                style="max-width: 50vw; max-height: 25vh; width: auto; height: auto;"
+                                alt="<%= proj.name %>">
                             <% } %>
                     </div>
 
