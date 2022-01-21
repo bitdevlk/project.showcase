@@ -15,6 +15,14 @@ async function Main() {
 
     console.log('Bitdev showcase!')
 
+    let GitCreds = env["GITCREDS"]
+    if (GitCreds) {
+        GitCreds = GitCreds + "@"
+    } else {
+        GitCreds = ""
+    }
+
+
     await Exec(`rm -rf ./build`)
 
     await Exec(`rm -rf ./repos`)
@@ -96,7 +104,7 @@ async function Main() {
 
             if (NPMBuild) {
 
-                await Exec(`cd "./repos/${proj.repo}/.." && git clone --depth 1 --single-branch https://github.com/${proj.repo}`)
+                await Exec(`cd "./repos/${proj.repo}/.." && git clone --depth 1 --single-branch https://${GitCreds}github.com/${proj.repo}`)
 
                 let packages = JSON.parse(fs.readFileSync(`./repos/${proj.repo}/package.json`))
                 packages["homepage"] = `/${proj.repo}/`
@@ -107,7 +115,7 @@ async function Main() {
                 await Exec(`mv "./repos/${proj.repo}/build/" "./build/${proj.repo}/"`)
             }
 
-            let linkPreview = await getLinkPreview("https://github.com/" + proj.repo)
+            let linkPreview = await getLinkPreview(`https://${GitCreds}github.com/` + proj.repo)
 
 
 
