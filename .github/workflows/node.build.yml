@@ -2,6 +2,9 @@ name: Node build
 
 on: [push, pull_request]
 
+env:
+  GITCREDS: ${{secrets.GITCREDS}}
+
 jobs:
   build:
     runs-on: ubuntu-latest
